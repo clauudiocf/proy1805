@@ -13,10 +13,16 @@ and open the template in the editor.
         <title></title>
     </head>
     <body>
-        <a href="revision.php"> Revisi&oacute;n sesi&oacute;n</a>
+        <div>   <?php if  (isset($_SESSION['USR']))?>
+            <a href="CerrarSesion.php">Cerrar Sesion</a>
+            <?php ?>
+        </div>
+     
+            <a href="revision.php">Revisi&oacute;n sesi&oacute;n</a>
+ 
         <?php if  (isset($_SESSION['USR']))?>
-        <form>
-            <div><label>Usuario</label><input type="text" nombre="nombre"></div>
+            <form action="revision.php" method="post">
+            <div><label>Usuario</label><input type="text" nombre="name"></div>
             <div><label>Password</label><input type="password" nombre="clave"></div>
             <input type="submit" value="Acceder">
         </form>

@@ -16,7 +16,7 @@ $oUsr->clave='1234';
 if($oUsr->VerificaUsuarioClave())
    $_SESSION('USR')=$oUsr;
 
-//header('location: http://localhost:8081/proy1605/');
+header('location: http://localhost:8081/proy1605/');
 
 
 ?>
