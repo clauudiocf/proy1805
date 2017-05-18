@@ -1,6 +1,5 @@
 <?php
-/*session_start();
-$_SESSION["saludo"]="Hola Mundo";*/
+session_start();
 ?>
 <!DOCTYPE html>
 <!--
@@ -15,8 +14,11 @@ and open the template in the editor.
     </head>
     <body>
         <a href="revision.php"> Revisi&oacute;n sesi&oacute;n</a>
+        <?php if  (isset($_SESSION['USR']))?>
         <form>
-            <input type="password" nombre="clave">
+            <div><label>Usuario</label><input type="text" nombre="nombre"></div>
+            <div><label>Password</label><input type="password" nombre="clave"></div>
+            <input type="submit" value="Acceder">
         </form>
         <?php 
             echo md5('#holamundo&');

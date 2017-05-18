@@ -1,4 +1,8 @@
+
 <?php
+
+session_start();
+
 $PATH='lib/';
 
 include $PATH.'Conexion.php';
@@ -10,11 +14,9 @@ $oUsr->nombre='flopez';
 $oUsr->clave='1234';
 
 if($oUsr->VerificaUsuarioClave())
-   echo "Existe";
-else
-    echo "No existe";
-/*session_start();
-var_dump($_SESSION);*/
+   $_SESSION('USR')=$oUsr;
+
+//header('location: http://localhost:8081/proy1605/');
 
 
 ?>
